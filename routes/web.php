@@ -11,14 +11,15 @@
 |
 */
 
-use Illuminate\Routing\Route;
+
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 
-Route::get('/echo', function () {
-    echo 'echo';
-});
+Route::any('/echo', 'EchoController@echo');
+
+Route::any('/echo/params/reflect', 'EchoController@reflect');
 

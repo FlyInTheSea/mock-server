@@ -11,9 +11,17 @@ class EchoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function echo()
     {
-        //
+        return response([
+            'echo' => 'echo',
+        ]);
     }
 
+    public function reflect(Request $request)
+    {
+        return response(
+            $request->all()
+        );
+    }
 }

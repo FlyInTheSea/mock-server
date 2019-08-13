@@ -10,9 +10,24 @@ namespace Tests\Feature\Http\Controllers;
 
 
 use Tests\NoAuthRequestTest;
-use Tests\TestCase;
 
 class EchoControllerTest extends NoAuthRequestTest
 {
+    /**
+     * response is [ 'echo'=>'echo']
+     * @test
+     */
+    public function echo()
+    {
+        $uri = 'echo';
 
+        $info = $this->json_get($uri);
+
+        $this->assertTrue(
+            [
+                'echo' => 'echo',
+            ] === $info
+        );
+
+    }
 }
