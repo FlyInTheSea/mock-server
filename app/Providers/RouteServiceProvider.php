@@ -39,6 +39,7 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapMock();
     }
 
     /**
@@ -48,7 +49,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function mapRoutes()
+    protected function mapMock()
     {
         Route::prefix('api')
             ->middleware('api')

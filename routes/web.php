@@ -23,3 +23,4 @@ Route::any('/echo', 'EchoController@echo');
 
 Route::any('/echo/params/reflect', 'EchoController@reflect');
 
+Route::any('/echo/header/reflect', 'EchoController@header_reflect');

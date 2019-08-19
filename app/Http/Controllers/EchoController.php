@@ -24,4 +24,11 @@ class EchoController extends Controller
             $request->all()
         );
     }
+
+    public function header_reflect(Request $request)
+    {
+        return response(
+            $request->header()
+        );
+    }
 }
